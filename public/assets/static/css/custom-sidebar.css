@@ -1,0 +1,89 @@
+/* Custom Sidebar Dropdown Fix */
+
+/* Ensure submenu is hidden by default */
+.sidebar-item.has-sub .submenu {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Show submenu when active */
+.sidebar-item.has-sub .submenu.active,
+.sidebar-item.has-sub.show .submenu {
+    display: block !important;
+    max-height: 500px;
+}
+
+/* Submenu item styling */
+.sidebar-item.has-sub .submenu .submenu-item {
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-item.has-sub .submenu .submenu-item a {
+    display: block;
+    padding: 12px 15px 12px 60px;
+    color: #6c757d;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-item.has-sub .submenu .submenu-item a:hover {
+    color: #0d6efd;
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+/* Active submenu item */
+.sidebar-item.has-sub .submenu .submenu-item.active a {
+    color: #0d6efd;
+    font-weight: 600;
+    background-color: rgba(13, 110, 253, 0.1);
+    border-left: 3px solid #0d6efd;
+    padding-left: 57px;
+}
+
+/* Parent link styling when has submenu */
+.sidebar-item.has-sub > .sidebar-link {
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Prevent default link behavior */
+.sidebar-item.has-sub > .sidebar-link:hover {
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+/* Add arrow/chevron for dropdown indicator */
+.sidebar-item.has-sub > .sidebar-link::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: auto;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"></path></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when menu is open */
+.sidebar-item.has-sub.show > .sidebar-link::after,
+.sidebar-item.has-sub .submenu.active::-webkit-scrollbar-button {
+    transform: rotate(180deg);
+}
+
+/* Make sure flex layout works for arrow */
+.sidebar-item.has-sub > .sidebar-link {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-item.has-sub > .sidebar-link span:not(:last-child) {
+    flex: 1;
+}

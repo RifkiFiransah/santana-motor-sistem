@@ -1,0 +1,54 @@
+{
+  "id": "/",
+  "name": "Santana Motor Sistem",
+  "short_name": "Santana Motor",
+  "lang": "id",
+  "dir": "ltr",
+  "description": "Sistem Manajemen Penjualan Motor Santana",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "fullscreen"],
+  "orientation": "portrait-primary",
+  "theme_color": "#2E7D32",
+  "background_color": "#FFFFFF",
+  "icons": [
+    {
+      "src": "/assets/static/images/logo/santana-logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/static/images/logo/santana-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": [
+    "business",
+    "productivity"
+  ],
+  "shortcuts": [
+    {
+      "name": "Pemilik Dashboard",
+      "short_name": "Dashboard",
+      "description": "Buka dashboard pemilik",
+      "url": "/pemilik/dashboard"
+    },
+    {
+      "name": "Gudang",
+      "short_name": "Gudang",
+      "description": "Kelola gudang dan motor masuk",
+      "url": "/gudang/dashboard"
+    },
+    {
+      "name": "Kasir",
+      "short_name": "Transaksi",
+      "description": "Buat transaksi penjualan",
+      "url": "/kasir/dashboard"
+    }
+  ],
+  "prefer_related_applications": false
+}
