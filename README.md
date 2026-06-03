@@ -52,34 +52,7 @@ copy env .env
 cp env .env
 ```
 
-### 4. Konfigurasi File `.env`
-
-Buka file `.env` dan sesuaikan konfigurasi berikut:
-
-```plaintext
-# ENVIRONMENT
-CI_ENVIRONMENT = development
-# Ubah ke 'production' untuk production
-
-# BASE URL
-app.baseURL = 'http://localhost:8080/'
-# Sesuaikan dengan URL aplikasi Anda
-
-# DATABASE CONFIGURATION
-database.default.hostname = localhost
-database.default.database = santana_motor
-database.default.username = root
-database.default.password = 
-database.default.DBDriver = MySQLi
-database.default.DBPrefix = 
-database.default.port = 3306
-
-# ENCRYPTION
-encryption.key = 
-# Generate key: php spark key:generate
-```
-
-### 5. Generate Encryption Key
+### 4. Generate Encryption Key
 
 ```bash
 php spark key:generate
@@ -87,7 +60,7 @@ php spark key:generate
 
 Perintah ini akan menghasilkan encryption key secara otomatis di file `.env`.
 
-### 6. Setup Database
+### 4. Setup Database
 
 #### a. Buat Database
 

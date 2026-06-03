@@ -9,20 +9,20 @@
         <div class="card-body">
             <form action="<?= base_url('gudang/motor/update/' . $motor['id']) ?>" method="POST" enctype="multipart/form-data">
                 <?= csrf_field() ?>
-                
+
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="plat_nomor">Plat Nomor <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="plat_nomor" name="plat_nomor" 
-                                   value="<?= old('plat_nomor', $motor['plat_nomor']) ?>" required>
+                            <input type="text" class="form-control" id="plat_nomor" name="plat_nomor"
+                                value="<?= old('plat_nomor', $motor['plat_nomor']) ?>" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="merk">Merk <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="merk" name="merk" 
-                                   value="<?= old('merk', $motor['merk']) ?>" required>
+                            <input type="text" class="form-control" id="merk" name="merk"
+                                value="<?= old('merk', $motor['merk']) ?>" required>
                         </div>
                     </div>
                 </div>
@@ -31,15 +31,15 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="tipe">Tipe <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="tipe" name="tipe" 
-                                   value="<?= old('tipe', $motor['tipe']) ?>" required>
+                            <input type="text" class="form-control" id="tipe" name="tipe"
+                                value="<?= old('tipe', $motor['tipe']) ?>" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="warna">Warna <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="warna" name="warna" 
-                                   value="<?= old('warna', $motor['warna']) ?>" required>
+                            <input type="text" class="form-control" id="warna" name="warna"
+                                value="<?= old('warna', $motor['warna']) ?>" required>
                         </div>
                     </div>
                 </div>
@@ -48,22 +48,22 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="tahun">Tahun <span class="text-danger">*</span></label>
-                            <input type="number" class="form-control" id="tahun" name="tahun" 
-                                   value="<?= old('tahun', $motor['tahun']) ?>" min="1900" max="<?= date('Y') ?>" required>
+                            <input type="number" class="form-control" id="tahun" name="tahun"
+                                value="<?= old('tahun', $motor['tahun']) ?>" min="1900" max="<?= date('Y') ?>" required>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="harga_beli">Harga Beli <span class="text-danger">*</span></label>
-                            <input type="number" class="form-control" id="harga_beli" name="harga_beli" 
-                                   value="<?= old('harga_beli', $motor['harga_beli']) ?>" required>
+                            <input type="number" class="form-control" id="harga_beli" name="harga_beli"
+                                value="<?= old('harga_beli', $motor['harga_beli']) ?>" required>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="harga_jual">Harga Jual <span class="text-danger">*</span></label>
-                            <input type="number" class="form-control" id="harga_jual" name="harga_jual" 
-                                   value="<?= old('harga_jual', $motor['harga_jual']) ?>" required>
+                            <input type="number" class="form-control" id="harga_jual" name="harga_jual"
+                                value="<?= old('harga_jual', $motor['harga_jual']) ?>" required>
                         </div>
                     </div>
                 </div>
@@ -72,8 +72,8 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="sumber_pembelian">Sumber Pembelian</label>
-                            <input type="text" class="form-control" id="sumber_pembelian" name="sumber_pembelian" 
-                                   value="<?= old('sumber_pembelian', $motor['sumber_pembelian'] ?? '') ?>">
+                            <input type="text" class="form-control" id="sumber_pembelian" name="sumber_pembelian"
+                                value="<?= old('sumber_pembelian', $motor['sumber_pembelian'] ?? '') ?>">
                         </div>
                     </div>
                 </div>
@@ -82,8 +82,8 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="foto">Ganti Foto Motor</label>
-                            <input type="file" class="form-control" id="foto" name="foto" 
-                                   accept="image/jpeg,image/jpg,image/png,image/gif">
+                            <input type="file" class="form-control" id="foto" name="foto"
+                                accept="image/jpeg,image/jpg,image/png,image/gif">
                             <small class="text-muted">Format: JPG, JPEG, PNG, GIF (Max 5MB) - Kosongkan jika tidak ingin mengubah</small>
                             <div id="preview-foto" class="mt-2"></div>
                         </div>
@@ -93,8 +93,8 @@
                             <label>Foto Saat Ini</label>
                             <div id="current-foto" class="mt-2">
                                 <?php if ($motor['foto']): ?>
-                                    <img src="<?= base_url('uploads/motorcycles/' . $motor['foto']) ?>" 
-                                         alt="Foto Motor" class="img-fluid rounded" style="max-width: 200px; max-height: 200px; object-fit: cover;">
+                                    <img src="<?= base_url('uploads/motorcycles/' . $motor['foto']) ?>"
+                                        alt="Foto Motor" class="img-fluid rounded" style="max-width: 200px; max-height: 200px; object-fit: cover;">
                                     <p class="small text-muted mt-2">File: <?= $motor['foto'] ?></p>
                                 <?php else: ?>
                                     <div class="alert alert-warning">
@@ -113,6 +113,9 @@
                     <a href="<?= base_url('gudang/motor') ?>" class="btn btn-secondary">
                         <i class="iconly-boldClose-Square"></i> Batal
                     </a>
+                    <button type="button" class="btn btn-danger" onclick="confirmDelete(<?= $motor['id'] ?>)">
+                        <i class="iconly-boldDelete"></i> Hapus Motor
+                    </button>
                 </div>
             </form>
         </div>
@@ -126,7 +129,7 @@
     document.getElementById('foto').addEventListener('change', function(e) {
         const file = e.target.files[0];
         const previewDiv = document.getElementById('preview-foto');
-        
+
         if (file) {
             const reader = new FileReader();
             reader.onload = function(event) {
@@ -145,5 +148,23 @@
             previewDiv.innerHTML = '';
         }
     });
+
+    // Konfirmasi hapus motor
+    function confirmDelete(id) {
+        Swal.fire({
+            title: 'Hapus Data Motor?',
+            text: "Data yang dihapus tidak dapat dikembalikan!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Ya, Hapus!',
+            cancelButtonText: 'Batal'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = '<?= base_url('gudang/motor/delete/') ?>' + id;
+            }
+        });
+    }
 </script>
 <?= $this->endSection() ?>

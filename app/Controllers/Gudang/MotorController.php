@@ -20,7 +20,7 @@ class MotorController extends BaseController
         $status = $this->request->getGet('status');
         $search = $this->request->getGet('search');
         $merk = $this->request->getGet('merk');
-        
+
         $query = $this->motorModel;
 
         if (!empty($search)) {
@@ -115,7 +115,7 @@ class MotorController extends BaseController
     public function show($id)
     {
         $data['motor'] = $this->motorModel->find($id);
-        
+
         if (!$data['motor']) {
             return redirect()->to('gudang/motor')->with('error', 'Motor tidak ditemukan');
         }
@@ -126,7 +126,7 @@ class MotorController extends BaseController
     public function edit($id)
     {
         $data['motor'] = $this->motorModel->find($id);
-        
+
         if (!$data['motor']) {
             return redirect()->to('gudang/motor')->with('error', 'Motor tidak ditemukan');
         }
@@ -137,7 +137,7 @@ class MotorController extends BaseController
     public function update($id)
     {
         $motor = $this->motorModel->find($id);
-        
+
         if (!$motor) {
             return redirect()->to('gudang/motor')->with('error', 'Motor tidak ditemukan');
         }
@@ -191,5 +191,24 @@ class MotorController extends BaseController
         $this->motorModel->update($id, $updateData);
 
         return redirect()->to('gudang/motor')->with('success', 'Data motor berhasil diupdate');
+    }
+
+    public function delete($id)
+    {
+        $motor = $this->motorModel->find($id);
+
+        if (!$motor) {
+            return redirect()->to('gudang/motor')->with('error', 'Motor tidak ditemukan');
+        }
+
+        // Hapus foto jika ada
+        if ($motor['foto'] && file_exists(WRITEPATH . 'uploads/motorcycles/' . $motor['foto'])) {
+            unlink(WRITEPATH . 'uploads/motorcycles/' . $motor['foto']);
+        }
+
+        // Hapus data motor
+        $this->motorModel->delete($id);
+
+        return redirect()->to('gudang/motor')->with('success', 'Data motor berhasil dihapus');
     }
 }

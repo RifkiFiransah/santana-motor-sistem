@@ -113,8 +113,8 @@ $current_url = uri_string();
                             </span>
                         </a>
                         <ul class="submenu <?= strpos($current_url, 'kasir/motor') !== false ? 'active' : '' ?>">
-                            <li class="submenu-item <?= strpos($current_url, 'kasir/motor/catalog') !== false ? 'active' : '' ?>">
-                                <a href="<?= base_url('kasir/motor/catalog') ?>">Cek Ketersediaan</a>
+                            <li class="submenu-item <?= strpos($current_url, 'kasir/motor') !== false ? 'active' : '' ?>">
+                                <a href="<?= base_url('kasir/motor') ?>">Cek Ketersediaan</a>
                             </li>
                         </ul>
                     </li>

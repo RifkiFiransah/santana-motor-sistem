@@ -5,8 +5,16 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-// $routes->get('/', 'Home::index');
-$routes->get('/', 'AuthController::index');
+// Landing Page Routes (Public)
+$routes->get('/', 'LandingController::index');
+$routes->get('catalog', 'LandingController::catalog');
+$routes->get('motor/(:num)', 'LandingController::detail/$1');
+$routes->get('about', 'LandingController::about');
+$routes->get('contact', 'LandingController::contact');
+$routes->post('contact/submit', 'LandingController::submitContact');
+
+// Auth Routes
+$routes->get('login', 'AuthController::index');
 $routes->post('login', 'AuthController::login');
 $routes->get('logout', 'AuthController::logout');
 $routes->get('sign-out', 'AuthController::logout'); // Alternative logout route
@@ -55,6 +63,7 @@ $routes->group('gudang', ['filter' => 'role:gudang'], function($routes) {
     $routes->get('motor/show/(:num)', 'Gudang\MotorController::show/$1');
     $routes->get('motor/edit/(:num)', 'Gudang\MotorController::edit/$1');
     $routes->post('motor/update/(:num)', 'Gudang\MotorController::update/$1');
+    $routes->get('motor/delete/(:num)', 'Gudang\MotorController::delete/$1');
     
     // Stok Opname (Diagram Petugas Gudang)
     $routes->get('stok-opname', 'Gudang\StokOpnameController::index');

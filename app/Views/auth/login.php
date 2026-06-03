@@ -5,9 +5,8 @@
     <div class="row h-100">
         <div class="col-lg-5 col-12">
             <div id="auth-left">
-                <div class="auth-logo">
-                    <a href="<?= base_url() ?>"><h2 class="text-primary"><i class="bi bi-motorcycle"></i> Santana Motor</h2></a>
-                </div>
+                <img src="<?= base_url('assets/static/images/logo/santana-logo.png') ?>" alt="Santana Motor Logo" style="width: 100px; height: auto;">
+                <img src="<?= base_url('assets/static/images/logo/fkom-uniku.png') ?>" alt="FKOM UNIKU" style="width: 100px; height: auto;">
                 <h1 class="auth-title">Login</h1>
                 <p class="auth-subtitle mb-5">Sistem Informasi Manajemen Motor</p>
 

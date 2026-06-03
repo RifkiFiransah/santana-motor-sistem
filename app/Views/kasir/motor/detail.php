@@ -63,7 +63,7 @@
                         <a href="<?= base_url('kasir/transaksi') ?>?motor_id=<?= $motor['id'] ?>" class="btn btn-primary">
                             <i class="iconly-boldBag-2"></i> Proses Transaksi
                         </a>
-                        <a href="<?= base_url('kasir/motor/catalog') ?>" class="btn btn-secondary">
+                        <a href="<?= base_url('kasir/motor') ?>" class="btn btn-secondary">
                             <i class="iconly-boldArrow---Left-2"></i> Kembali
                         </a>
                     </div>

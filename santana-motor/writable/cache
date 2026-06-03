@@ -1,0 +1,3 @@
+The writable/cache directory is used for caching purposes and is typically left empty for storing cached assets. Therefore, the contents of the file will be:
+
+<!-- This directory is intentionally left blank. -->

@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #435ebe;
+}
+
+a {
+    text-decoration: none;
+    color: #435ebe;
+}
+
+a:hover {
+    color: #364a99;
+}
+
+.hero-section {
+    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.btn-hero {
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    margin: 0.5rem;
+    transition: background 0.3s;
+}
+
+.btn-primary-hero {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-secondary-hero {
+    background-color: #007bff;
+    color: white;
+}
+
+.stats-section {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.stat-item {
+    display: inline-block;
+    margin: 1rem;
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}

@@ -97,9 +97,9 @@
                                     <td>Rp <?= number_format($motor['harga_jual'], 0, ',', '.') ?></td>
                                     <td>
                                         <?php if ($motor['status'] === 'tersedia'): ?>
-                                            <span class="badge bg-success">Tersedia Dapat Dihapus</span>
+                                            <span class="badge bg-success">Tersedia </span>
                                         <?php else: ?>
-                                            <span class="badge bg-danger">Terjual Tidak Dapat Dihapus</span>
+                                            <span class="badge bg-danger">Terjual</span>
                                         <?php endif; ?>
                                     </td>
                                     <td><?= date('d/m/Y', strtotime($motor['tanggal_masuk'])) ?></td>
